@@ -325,17 +325,13 @@ public class SquatchWatchUserAndArticleDaoImpl implements SquatchWatchUserAndArt
         
         @Override
         public Article mapRow(ResultSet rs, int i) throws SQLException {
-//            User user = new User();
-//            user.setUserId(rs.getInt("userId"));
-//            user.setUserName(rs.getString("userName"));
-//            user.setPermission(rs.getString("permission"));
+
 
             Article art = new Article();
             art.setArticleId(rs.getInt("articleId"));
             art.setArticleDate(rs.getTimestamp("articleDate").toLocalDateTime().toLocalDate());
             art.setContent(rs.getString("content"));
             art.setUserId(rs.getInt("fk_userid"));
-//            art.setUser(user);
 
             return art;
         }

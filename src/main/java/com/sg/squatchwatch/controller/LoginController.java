@@ -15,9 +15,5 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class LoginController {
-    // endpoint sucks do better
-//    @RequestMapping(value = "/login", method = RequestMethod.GET)
-//    public String showLoginForm() {
-//        return "login";
-//    }
+
 }

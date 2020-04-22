@@ -79,28 +79,14 @@ public class articleController {
         return "Article/editArticleForm";
     }
 
-//    @RequestMapping(value = "updateItem", method = RequestMethod.POST)
-//    public String updateItem(HttpServletRequest request) {
-//        Item item = new Item(request.getParameter("itemName")),
-//                request.getParameter("description"),
-//                new Long(request.getParameter("itemValue"));
-//                
-//
-//       
-//
-//       
-//        dao.updateItem(item);
-//        return "redirect:displayItemPage";
-//    }
+
     @RequestMapping(value = "/createArticle", method = RequestMethod.POST)
     public String createArticle(HttpServletRequest request, Model model) {
 
         Article article = new Article();
         User user = new User();
 
-//        String articleDateString =request.getParameter("articleDate");
-//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/MM/yyyy");
-//        LocalDate localDate = LocalDate.parse(articleDateString, formatter);
+
         LocalDate articleDate = LocalDate.now();
 
         try {

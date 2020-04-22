@@ -98,19 +98,7 @@ public class categoryController {
         return "Category/editCategoryForm";
     }
 
-//    @RequestMapping(value = "updateItem", method = RequestMethod.POST)
-//    public String updateItem(HttpServletRequest request) {
-//        Item item = new Item(request.getParameter("itemName")),
-//                request.getParameter("description"),
-//                new Long(request.getParameter("itemValue"));
-//                
-//
-//       
-//
-//       
-//        dao.updateItem(item);
-//        return "redirect:displayItemPage";
-//    }
+
     @RequestMapping(value = "/editCategory", method = RequestMethod.POST)
     public String editCategory(HttpServletRequest request, Model model) {
         Category updatedCategory = new Category();

@@ -160,24 +160,6 @@ public class UserController {
         return "redirect:User";
     }
 
-//    @RequestMapping(value = "updateItem", method = RequestMethod.POST)
-//    public String updateItem(HttpServletRequest request) {
-//        Item item = new Item(request.getParameter("itemName")),
-//                request.getParameter("description"),
-//                new Long(request.getParameter("itemValue"));
-//                
-//
-//       
-//
-//       
-//        dao.updateItem(item);
-//        return "redirect:displayItemPage";
-//    }
-//    @RequestMapping(value = "/displayAddItemForm", method = RequestMethod.GET)
-//    public String displayAddItemForm(HttpServletRequest request) {
-//
-//        return "Item/addItemForm";
-//    }
     @RequestMapping(value = "/createUser", method = RequestMethod.POST)
     public String createUser(HttpServletRequest request) {
 

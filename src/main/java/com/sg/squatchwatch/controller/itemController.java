@@ -33,7 +33,6 @@ import org.springframework.web.multipart.MultipartFile;
  * @author christophercunningham
  */
 @Controller
-//@RequestMapping({"/Item"})
 public class itemController {
 
     //setting the folder where the images will be saved
@@ -97,11 +96,7 @@ public class itemController {
         return "Item/itemDetail";
     }
 
-//    @RequestMapping(value = "/displayEditItemForm", method = RequestMethod.GET)
-//    public String displayEditItemForm(HttpServletRequest request) {
-//
-//        return "Item/editItemForm";
-//    }
+
     @RequestMapping(value = "/deleteItem", method = RequestMethod.GET)
     public String deleteItem(HttpServletRequest request) {
         String itemIdParameter = request.getParameter("itemId");
@@ -198,11 +193,7 @@ public class itemController {
             String updatedFeaturedItem = request.getParameter("featured");
             updatedItem.setFeaturedItem(Boolean.parseBoolean(updatedFeaturedItem));
 
-//            if (updatedFeaturedItem.equalsIgnoreCase("")) {
-//                updatedItem.setFeaturedItem(oldItemInfo.getFeaturedItem());
-//            } else {
-//                updatedItem.setFeaturedItem(Boolean.parseBoolean(updatedFeaturedItem));
-//            }
+
 
             String[] categoryIdList = request.getParameterValues("categories");
 
@@ -318,12 +309,7 @@ public class itemController {
         return "redirect:Item";
     }
 
-//    @RequestMapping(value = "/searchItems", method = RequestMethod.POST)
-//    @ResponseBody
-//    public List<Item> searchContacts(@RequestBody Map<String, String> searchMap) {
-//        // Create the map of search criteria to send to the DAO
-//        return "redirect:Item";
-//    }
+
     @RequestMapping(value = "/searchItem", method = RequestMethod.POST)
     public String searchItems(HttpServletRequest request, Model model) {
         List<Category> categoryList = dao.getAllCategories();
